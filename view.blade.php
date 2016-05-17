@@ -40,7 +40,7 @@
   <link rel="stylesheet" type="text/css" href="{!! (\Request::secure() ? "https://" : "http://") . (\Request::getHost()); !!}/public/bower/AdminLTE/plugins/ckeditor/skins/moono/editor.css">
   <link rel="stylesheet" type="text/css" href="{!! (\Request::secure() ? "https://" : "http://") . (\Request::getHost()); !!}/public/bower/AdminLTE/plugins/datatables/dataTables.bootstrap.css">
   <link rel="stylesheet" type="text/css" href="{!! (\Request::secure() ? "https://" : "http://") . (\Request::getHost()); !!}/public/bower/loaders.css/loaders.css">
-  <link rel="stylesheet" type="text/css" href="{!! (\Request::secure() ? "https://" : "http://") . (\Request::getHost()); !!}/public/L2/css/c.css">
+  <link rel="stylesheet" type="text/css" href="{!! (\Request::secure() ? "https://" : "http://") . (\Request::getHost()); !!}/public/L10000/css/c.css">
   <link rel="stylesheet" type="text/css" href="{!! (\Request::secure() ? "https://" : "http://") . (\Request::getHost()); !!}/public/D10000/css/c.css">
   <!-- document css: stop -->
 
@@ -3256,7 +3256,7 @@
   <script src="{!! (\Request::secure() ? "https://" : "http://") . (\Request::getHost()); !!}/public/bower/AdminLTE/plugins/datatables/dataTables.bootstrap.min.js"></script>
   <script src="{!! (\Request::secure() ? "https://" : "http://") . (\Request::getHost()); !!}/public/bower/knockoutjs/dist/knockout.js"></script>
   <script src="{!! (\Request::secure() ? "https://" : "http://") . (\Request::getHost()); !!}/public/bower/history.js/scripts/bundled/html4+html5/native.history.js"></script>
-  <script src="{!! (\Request::secure() ? "https://" : "http://") . (\Request::getHost()); !!}/public/L2/js/j.js"></script>
+  <script src="{!! (\Request::secure() ? "https://" : "http://") . (\Request::getHost()); !!}/public/L10000/js/j.js"></script>
   <script src="{!! (\Request::secure() ? "https://" : "http://") . (\Request::getHost()); !!}/public/D10000/js/j.js"></script>
   <!-- document js: stop -->
 
