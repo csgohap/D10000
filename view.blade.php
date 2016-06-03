@@ -3173,14 +3173,31 @@
                 </div>
               </div>
 
+              <?php /*------------------------------------>
+              <!-- 2.14.2.4. Аутентификация через Steam -->
+              <!--------------------------------------*/ ?>
+              <div class="box">
+                <div class="box-header with-border subdoc_title">
+                  Sign in throught Steam
+                </div>
+                <div class="box-body form-horizontal">
+
+                  <?php /* 1] Кнопка "Войти через steam" -->
+                  <!-----------------------------------*/ ?>
+                  <div>
+                    <a class="btn btn-block btn-social btn-github" onclick="if(navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) window.open('{!! (\Request::secure() ? "https://" : "http://") . (\Request::getHost()) . ":" . (\Request::getPort()); !!}/authwith?provider=steam'); popupCenter('{!! (\Request::secure() ? "https://" : "http://") . (\Request::getHost()) . ":" . (\Request::getPort()); !!}/authwith?provider=steam','steam','1024','768');")>
+                      <i class="fa fa-steam-square"></i> Sign in with Steam
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+
 
             </div>
 
           </div>
         </div>
-
-
-
 
       </div>
     </div>

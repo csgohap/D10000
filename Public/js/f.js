@@ -102,11 +102,11 @@
  *
  *    f.s6.auth_email_password      | s6.1. Аутентифицироваться через email и пароль
  *    f.s6.logout                   | s6.2. Выйти из своей учётной записи
+ *    f.s6.auth_phone_password      | s6.3. Аутентифицироваться через phone и пароль
+ *    f.s6.auth_steam               | s6.4. Аутентифицироваться через steam
  *
  *
  */
-
-
 
 
 //========================//
@@ -3171,6 +3171,50 @@ var ModelFunctions = { constructor: function(self) { var f = this;
 			});
 
 		};
+
+		//---------------------------------------//
+		// s6.4. Аутентифицироваться через steam //
+		//---------------------------------------//
+		f.s6.auth_steam = function(data, event){
+
+			var result = popupCenter('https://steamcommunity.com/openid/login?openid.ns=http://specs.openid.net/auth/2.0&openid.mode=checkid_setup&openid.return_to=http://easydrop.maxpain.pro/_oauth/steam?close%26b3GkXMPb4btsnQwnm&openid.realm=http://easydrop.maxpain.pro/&openid.identity=http://specs.openid.net/auth/2.0/identifier_select&openid.claimed_id=http://specs.openid.net/auth/2.0/identifier_select&state=eyJsb2dpblN0eWxlIjoicG9wdXAiLCJjcmVkZW50aWFsVG9rZW4iOiJiM0drWE1QYjRidHNuUXdubSIsImlzQ29yZG92YSI6ZmFsc2V9','steam','1024','768');
+
+
+
+
+//			// 2] Отправить запрос
+//			ajaxko(self, {
+//				command: 	    "\\M5\\Commands\\C58_auth_email_password",
+//				from: 		    "ajaxko",
+//				data: 		    {
+//					email: self.m.s6.email_password.email(),
+//					password: self.m.s6.email_password.password()
+//				},
+//				prejob:       function(config, data, event){},
+//				postjob:      function(data, params){},
+//				ok_0:         function(data, params){
+//
+//					// 1] Сообщить, что пользователи успешно отвязаны
+//					notify({msg: 'You are successfully authenticated!', time: 5, fontcolor: 'RGB(50,120,50)'});
+//
+//					// 2] Перезагрузить страницу
+//          window.location.reload(true);
+//
+//				},
+//				ok_2:         function(data, params){
+//
+//					// 1] Сообщить
+//					notify({target: document.body, msg: data.data.errormsg, time: 10, fontcolor: 'RGB(200,50,50)'});
+//
+//				}
+//			});
+
+
+
+		};
+
+
+
 
 
 
