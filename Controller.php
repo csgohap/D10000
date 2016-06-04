@@ -144,6 +144,20 @@ class Controller extends BaseController {
         "filters"         => json_encode("", JSON_UNESCAPED_UNICODE)
       ]);
 
+      // 5. Сформировать стоку с websocket_server
+      $websocket_server = call_user_func(function(){
+
+        // 5.1. Получить протокол запроса
+        $protocol = \Request::secure() ? "https://" : "http://";
+
+        // 5.2. Получить хост запроса
+        $host = \Request::getHost();
+
+        // 5.3. Сформировать результат
+        return $protocol . $host . ':6001';
+
+      });
+
       // M. Извлечь из GET-запроса параметр page
       if(Request::has('page')) $page = Request::input('page');
       else $page = '';
@@ -160,6 +174,8 @@ class Controller extends BaseController {
         'privs'                 => $privs,
         'tags'                  => $tags,
         'users'                 => $users,
+        'websocket_server'      => $websocket_server,
+        'websockets_channel'    => Session::getId()
 
       ]), 'layoutid' => $this->layoutid.'::layout']);
 

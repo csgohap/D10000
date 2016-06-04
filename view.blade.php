@@ -228,8 +228,9 @@
                         <th rowspan="1" colspan="1" style="width: 4%;"></th>
                         <th rowspan="1" colspan="1" style="width: 4%;">№</th>
                         <th rowspan="1" colspan="1" style="width: 10%;">ID</th>
-                        <th rowspan="1" colspan="1" style="width: 30%;">Email</th>
+                        <th rowspan="1" colspan="1" style="width: 20%;">Email</th>
                         <th rowspan="1" colspan="1" style="width: 20%;">Phone</th>
+                        <th rowspan="1" colspan="1" style="width: 10%;">Nickname</th>
                         <th rowspan="1" colspan="1" style="width: 11%;">Surname</th>
                         <th rowspan="1" colspan="1" style="width: 11%;">Name</th>
                         <th rowspan="1" colspan="1" style="width: 10%;">Patronymic</th>
@@ -249,6 +250,7 @@
                             <i class="fa fa-fw fa-exclamation" data-bind="visible: !is_phone_approved() && phone()" style="color: RGBA(255,0,0,.5)" title="This phone is not approved"></i>
                             <span data-bind="text: phone"></span>
                           </td>
+                          <td data-bind="text: nickname"></td>
                           <td data-bind="text: surname"></td>
                           <td data-bind="text: name"></td>
                           <td data-bind="text: patronymic"></td>
@@ -2982,6 +2984,24 @@
                       </div>
                     </div>
 
+                    <?php /* 5] ha_provider_name -->
+                    <!-------------------------*/ ?>
+                    <div class="form-group">
+                      <div class="col-sm-3 control-label">Provider</div>
+                      <div class="col-sm-9">
+                        <input class="form-control input-sm" data-bind="textInput: m.s0.auth.user().ha_provider_name" disabled>
+                      </div>
+                    </div>
+
+                    <?php /* 6] ha_provider_uid -->
+                    <!------------------------*/ ?>
+                    <div class="form-group">
+                      <div class="col-sm-3 control-label">Provider uid</div>
+                      <div class="col-sm-9">
+                        <input class="form-control input-sm" data-bind="textInput: m.s0.auth.user().ha_provider_uid" disabled>
+                      </div>
+                    </div>
+
                     <?php /* n] Кнопка "Выйти" -->
                     <!-----------------------*/ ?>
                     <div>
@@ -3301,6 +3321,7 @@
   <script src="{!! (\Request::secure() ? "https://" : "http://") . (\Request::getHost()) . ":" . (\Request::getPort()); !!}/public/bower/AdminLTE/plugins/datatables/dataTables.bootstrap.min.js"></script>
   <script src="{!! (\Request::secure() ? "https://" : "http://") . (\Request::getHost()) . ":" . (\Request::getPort()); !!}/public/bower/knockoutjs/dist/knockout.js"></script>
   <script src="{!! (\Request::secure() ? "https://" : "http://") . (\Request::getHost()) . ":" . (\Request::getPort()); !!}/public/bower/history.js/scripts/bundled/html4+html5/native.history.js"></script>
+  <script src="{!! (\Request::secure() ? "https://" : "http://") . (\Request::getHost()) . ":" . (\Request::getPort()); !!}/public/bower/socket.io-client/socket.io.js"></script>
   <script src="{!! (\Request::secure() ? "https://" : "http://") . (\Request::getHost()) . ":" . (\Request::getPort()); !!}/public/L10000/js/j.js"></script>
   <script src="{!! (\Request::secure() ? "https://" : "http://") . (\Request::getHost()) . ":" . (\Request::getPort()); !!}/public/D10000/js/j.js"></script>
   <!-- document js: stop -->

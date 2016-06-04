@@ -2585,7 +2585,7 @@ var ModelFunctions = { constructor: function(self) { var f = this;
 					adminnote:				self.m.s5.edit.adminnote(),
 					ha_provider_name:	self.m.s5.edit.ha_provider_name(),
 					ha_provider_uid:	self.m.s5.edit.ha_provider_uid(),
-					nickname:					self.m.s5.edit.nickname(),
+					nickname:					self.m.s5.edit.nickname()
 				},
 			  prejob:       function(config, data, event){},
 			  postjob:      function(data, params){},
