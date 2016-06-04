@@ -1901,7 +1901,13 @@ var ModelProto = { constructor: function(ModelFunctions) {
 				else result = result + $patronymic;
 			}
 
-			// 5] Записать результат в m.s6.fio
+			// 5] Если result пуст, использовать nickname
+			if(!result) result = self.m.s0.auth.user().nickname();
+
+			// 6] Если result снова пуст, использовать [nameless]
+			if(!result) result = '[nameless]';
+
+			// 7] Записать результат в m.s6.fio
 			self.m.s6.fio(result);
 
 		})();
