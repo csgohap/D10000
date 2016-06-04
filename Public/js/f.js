@@ -2491,7 +2491,8 @@ var ModelFunctions = { constructor: function(self) { var f = this;
 					phone: 				self.m.s5.new.phone(),
 					isanonymous: 	self.m.s5.new.isanonymous() ? "yes" : "no",
 					password: 		self.m.s5.new.password(),
-					adminnote: 		self.m.s5.new.adminnote()
+					adminnote: 		self.m.s5.new.adminnote(),
+					nickname: 		self.m.s5.new.nickname()
 				},
 			  prejob:       function(config, data, event){},
 			  postjob:      function(data, params){},
@@ -2514,6 +2515,7 @@ var ModelFunctions = { constructor: function(self) { var f = this;
 					self.m.s5.new.isanonymous(0);
 					self.m.s5.new.password("");
 					self.m.s5.new.adminnote("");
+					self.m.s5.new.nickname("");
 
 				},
 			  ok_2:         function(data, params){
@@ -2552,6 +2554,9 @@ var ModelFunctions = { constructor: function(self) { var f = this;
 			self.m.s5.edit.isanonymous(data.isanonymous());
 			self.m.s5.edit.isblocked(data.is_blocked());
 			self.m.s5.edit.adminnote(data.adminnote());
+			self.m.s5.edit.ha_provider_name(data.ha_provider_name());
+			self.m.s5.edit.ha_provider_uid(data.ha_provider_uid());
+			self.m.s5.edit.nickname(data.nickname());
 
 			// 2] Открыть поддокумент редактирования пользователя
 			self.f.s1.choose_subdoc(2);
@@ -2567,17 +2572,20 @@ var ModelFunctions = { constructor: function(self) { var f = this;
 			  command: 	    "\\M5\\Commands\\C17_changeuser",
 				from: 		    "f.s5.edit",
 			  data: 		    {
-					id:     			self.m.s5.edit.id(), 				    							
-					email:   			self.m.s5.edit.email(), 			  			
-					surname: 			self.m.s5.edit.surname(), 		 			
-					name:    			self.m.s5.edit.name(), 			   			
-					patronymic: 	self.m.s5.edit.patronymic(), 					
-					gender:   		self.m.s5.edit.gender(), 		  				
-					birthday:  		self.m.s5.edit.birthday(), 	 				
-					phone:  			self.m.s5.edit.phone(), 			  			
-					isanonymous:	self.m.s5.edit.isanonymous() ? "yes" : "no",
-					is_blocked:		self.m.s5.edit.isblocked() ? "yes" : "no",
-					adminnote:		self.m.s5.edit.adminnote()
+					id:     					self.m.s5.edit.id(),
+					email:   					self.m.s5.edit.email(),
+					surname: 					self.m.s5.edit.surname(),
+					name:    					self.m.s5.edit.name(),
+					patronymic: 			self.m.s5.edit.patronymic(),
+					gender:   				self.m.s5.edit.gender(),
+					birthday:  				self.m.s5.edit.birthday(),
+					phone:  					self.m.s5.edit.phone(),
+					isanonymous:			self.m.s5.edit.isanonymous() ? "yes" : "no",
+					is_blocked:				self.m.s5.edit.isblocked() ? "yes" : "no",
+					adminnote:				self.m.s5.edit.adminnote(),
+					ha_provider_name:	self.m.s5.edit.ha_provider_name(),
+					ha_provider_uid:	self.m.s5.edit.ha_provider_uid(),
+					nickname:					self.m.s5.edit.nickname(),
 				},
 			  prejob:       function(config, data, event){},
 			  postjob:      function(data, params){},
@@ -2601,6 +2609,9 @@ var ModelFunctions = { constructor: function(self) { var f = this;
 					self.m.s5.edit.isanonymous("");
 					self.m.s5.edit.isblocked("");
 					self.m.s5.edit.adminnote("");
+					self.m.s5.edit.ha_provider_name("");
+					self.m.s5.edit.ha_provider_uid("");
+					self.m.s5.edit.nickname("");
 
 				},
 			  ok_2:         function(data, params){

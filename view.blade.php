@@ -954,6 +954,33 @@
                     </div>
                   </div>
 
+                  <?php /* 12] ha_provider_name -->
+                  <!--------------------------*/ ?>
+                  <div class="form-group">
+                    <div class="col-sm-3 control-label">Provider name</div>
+                    <div class="col-sm-9">
+                      <input class="form-control" data-bind="textInput: m.s5.edit.ha_provider_name" disabled>
+                    </div>
+                  </div>
+
+                  <?php /* 13] ha_provider_uid -->
+                  <!-------------------------*/ ?>
+                  <div class="form-group">
+                    <div class="col-sm-3 control-label">Provider uid</div>
+                    <div class="col-sm-9">
+                      <input class="form-control" data-bind="textInput: m.s5.edit.ha_provider_uid" disabled>
+                    </div>
+                  </div>
+
+                  <?php /* 14] Nickname -->
+                  <!------------------*/ ?>
+                  <div class="form-group">
+                    <div class="col-sm-2 control-label">Nickname</div>
+                    <div class="col-sm-10">
+                      <input class="form-control" placeholder="superivan" data-bind="textInput: m.s5.edit.nickname">
+                    </div>
+                  </div>
+
                   <?php /* n] Кнопка "Редактировать" -->
                   <!-------------------------------*/ ?>
                   <div>
@@ -1165,10 +1192,9 @@
                 </div>
                 <div class="box-body">
 
-                  <?php /* Обязательные поля -->
-                  <!-----------------------*/ ?>
+                  <?php /* Поля формы -->
+                  <!----------------*/ ?>
                   <div class="form-horizontal">
-                    <div><b>Mandatory fields</b></div><br>
 
                     <?php /* 1] Email -->
                     <!--------------*/ ?>
@@ -1179,14 +1205,7 @@
                       </div>
                     </div>
 
-                  </div>
-
-                  <?php /* Не обязательные поля -->
-                  <!--------------------------*/ ?>
-                  <div class="form-horizontal">
-                    <div><b>Not mandatory fields</b></div><br>
-
-                    <?php /* 1] Surname -->
+                    <?php /* 2] Surname -->
                     <!----------------*/ ?>
                     <div class="form-group">
                       <div class="col-sm-2 control-label">Surname</div>
@@ -1195,7 +1214,7 @@
                       </div>
                     </div>
 
-                    <?php /* 2] Name -->
+                    <?php /* 3] Name -->
                     <!-------------*/ ?>
                     <div class="form-group">
                       <div class="col-sm-2 control-label">Name</div>
@@ -1204,7 +1223,7 @@
                       </div>
                     </div>
 
-                    <?php /* 3] Patronymic -->
+                    <?php /* 4] Patronymic -->
                     <!-------------------*/ ?>
                     <div class="form-group">
                       <div class="col-sm-2 control-label">Patronymic</div>
@@ -1213,7 +1232,7 @@
                       </div>
                     </div>
 
-                    <?php /* 4] Gender -->
+                    <?php /* 5] Gender -->
                     <!---------------*/ ?>
                     <div class="form-group">
                       <div class="col-sm-2 control-label">Gender</div>
@@ -1222,7 +1241,7 @@
                       </div>
                     </div>
 
-                    <?php /* 5] Birthday -->
+                    <?php /* 6] Birthday -->
                     <!-----------------*/ ?>
                     <div class="form-group">
                       <div class="col-sm-2 control-label">Birthday</div>
@@ -1236,7 +1255,7 @@
                       </div>
                     </div>
 
-                    <?php /* 6] Phone -->
+                    <?php /* 7] Phone -->
                     <!--------------*/ ?>
                     <div class="form-group">
                       <div class="col-sm-2 control-label">Phone</div>
@@ -1245,7 +1264,7 @@
                       </div>
                     </div>
 
-                    <?php /* 7] Анонимный ли пользователь -->
+                    <?php /* 8] Анонимный ли пользователь -->
                     <!----------------------------------*/ ?>
                     <div class="form-group">
                       <div class="col-sm-2 control-label">Anon</div>
@@ -1258,12 +1277,21 @@
                       </div>
                     </div>
 
-                    <?php /* 8] Password -->
+                    <?php /* 9] Password -->
                     <!-----------------*/ ?>
                     <div class="form-group">
                       <div class="col-sm-2 control-label">Password</div>
                       <div class="col-sm-10">
                         <input class="form-control" placeholder="ivanovich" data-bind="textInput: m.s5.new.password">
+                      </div>
+                    </div>
+
+                    <?php /* 10] Nickname -->
+                    <!------------------*/ ?>
+                    <div class="form-group">
+                      <div class="col-sm-2 control-label">Nickname</div>
+                      <div class="col-sm-10">
+                        <input class="form-control" placeholder="superivan" data-bind="textInput: m.s5.new.nickname">
                       </div>
                     </div>
 

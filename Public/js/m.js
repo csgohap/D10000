@@ -423,7 +423,7 @@ var ModelProto = { constructor: function(ModelFunctions) {
 	//--------------------------------------------------//
 	// s1.3. Ссылка на выбранный поддокумент приложения //
 	//--------------------------------------------------//
-	self.m.s1.selected_subdoc = ko.observable(self.m.s1.subdocs()[13]());
+	self.m.s1.selected_subdoc = ko.observable(self.m.s1.subdocs()[0]());
 
 	//--------------------------------------//
 	// s1.n. Индексы и вычисляемые значения //
@@ -1414,22 +1414,29 @@ var ModelProto = { constructor: function(ModelFunctions) {
 		//--------------------//
 		self.m.s5.new.adminnote = ko.observable("");
 
+		// 11] Никнэйм //
+		//-------------//
+		self.m.s5.new.nickname = ko.observable("");
+
 	//------------------------------------------//
 	// s5.7. Модель редактирования пользователя //
 	//------------------------------------------//
 	self.m.s5.edit = {};
 
-		self.m.s5.edit.id 					= ko.observable("");
-		self.m.s5.edit.email 				= ko.observable("");
-		self.m.s5.edit.surname 		 	= ko.observable("");
-		self.m.s5.edit.name 				= ko.observable("");
-		self.m.s5.edit.patronymic 	= ko.observable("");
-		self.m.s5.edit.gender 			= ko.observable("");
-		self.m.s5.edit.birthday 		= ko.observable("");
-		self.m.s5.edit.phone 			 	= ko.observable("");
-		self.m.s5.edit.isanonymous 	= ko.observable("");
-		self.m.s5.edit.isblocked 	  = ko.observable("");
-		self.m.s5.edit.adminnote 	 	= ko.observable("");
+		self.m.s5.edit.id 								= ko.observable("");
+		self.m.s5.edit.email 							= ko.observable("");
+		self.m.s5.edit.surname 		 				= ko.observable("");
+		self.m.s5.edit.name 							= ko.observable("");
+		self.m.s5.edit.patronymic 				= ko.observable("");
+		self.m.s5.edit.gender 						= ko.observable("");
+		self.m.s5.edit.birthday 					= ko.observable("");
+		self.m.s5.edit.phone 			 				= ko.observable("");
+		self.m.s5.edit.isanonymous 				= ko.observable("");
+		self.m.s5.edit.isblocked 	  			= ko.observable("");
+		self.m.s5.edit.adminnote 	 				= ko.observable("");
+		self.m.s5.edit.ha_provider_name 	= ko.observable("");
+		self.m.s5.edit.ha_provider_uid 	 	= ko.observable("");
+		self.m.s5.edit.nickname 	 				= ko.observable("");
 
 	//-------------------------------------//
 	// s5.8. Модель фильтров пользователей //
