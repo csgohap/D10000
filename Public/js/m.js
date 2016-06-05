@@ -176,9 +176,11 @@ var ModelProto = { constructor: function(ModelFunctions) {
 
 			});
 
+			self.websocket.ws1.on("m3:now", function(message) {
 
+				console.log(message);
 
-
+      });
 
 
 
