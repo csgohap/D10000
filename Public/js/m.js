@@ -170,18 +170,12 @@ var ModelProto = { constructor: function(ModelFunctions) {
 
 				// 1] Сообщить об успешной аутентификации через Steam
 				notify({msg: 'Successful auth with Steam!', time: 5, fontcolor: 'RGB(50,120,50)'});
+				console.log('Successful auth with Steam!');
 
 				// 2] Перезагрузить документ
 				location.reload();
 
 			});
-
-			self.websocket.ws1.on("m3:now", function(message) {
-
-				console.log(message);
-
-      });
-
 
 
 	});
