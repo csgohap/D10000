@@ -153,7 +153,6 @@
         <!--------------------*/ ?>
         <div class="tab-pane" data-bind="css: {active: m.s1.selected_subdoc().id() == 1}">
 
-
           <?php /*-------------------->
           <!-- 2.1.1. Пользователи  -->
           <!----------------------*/ ?>
@@ -3286,7 +3285,7 @@
 
   <!-- document js: start -->
   <script src="{!! (\Request::secure() ? "https://" : "http://") . (\Request::getHost()) . ":" . (\Request::getPort()); !!}/public/bower/4gekkman-bower-jslib1/library.js"></script>
-  <script src="{!! (\Request::secure() ? "https://" : "http://") . (\Request::getHost()) . ":" . (\Request::getPort()); !!}/public/bower/jquery/dist/jquery.min.js"></script>
+  <script src="{!! (\Request::secure() ? "https://" : "http://") . (\Request::getHost()) . ":" . (\Request::getPort()); !!}/public/bower/jquery/jquery.min.js"></script>
   <script src="{!! (\Request::secure() ? "https://" : "http://") . (\Request::getHost()) . ":" . (\Request::getPort()); !!}/public/bower/moment/moment.js"></script>
   <script src="{!! (\Request::secure() ? "https://" : "http://") . (\Request::getHost()) . ":" . (\Request::getPort()); !!}/public/bower/AdminLTE/bootstrap/js/bootstrap.min.js"></script>
   <script src="{!! (\Request::secure() ? "https://" : "http://") . (\Request::getHost()) . ":" . (\Request::getPort()); !!}/public/bower/AdminLTE/plugins/fastclick/fastclick.min.js"></script>
