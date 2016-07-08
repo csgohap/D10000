@@ -114,19 +114,6 @@
   </div>
 </div>
 
-<?php /*--------------------------->
-<!-- Заголовок и хлебные крошки  -->
-<!-----------------------------*/ ?>
-<section class="content-header content-header-my">
-  <h1>
-    Users control system
-  </h1>
-  <ol class="breadcrumb breadcrumb-my">
-    <li><a href="#"><i class="fa fa-flash"></i>Users control system</a></li>
-    <!--<li class="active">Here</li>-->
-  </ol>
-</section>
-
 <?php /*------------------->
 <!-- Главная таб-панель  -->
 <!---------------------*/ ?>
