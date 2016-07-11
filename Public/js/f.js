@@ -1083,6 +1083,7 @@ var ModelFunctions = { constructor: function(self) { var f = this;
 				else return data.id();
 
 			})();
+			if(!subdoc_id) return;
 
 			// 2] Получить объект поддокумента с id
 			var subdoc = self.m.s1.indexes.subdocs[subdoc_id];
