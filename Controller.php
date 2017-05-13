@@ -189,8 +189,6 @@ class Controller extends BaseController {
   //----------------------------------------//
   public function postIndex() {
 
-    Log::info(111);
-
     //----------------------------------------------------------------------------------//
     // Провести авторизацию прав доступа запрашивающего пользователя к этому интерфейсу //
     //----------------------------------------------------------------------------------//
@@ -205,8 +203,6 @@ class Controller extends BaseController {
         return Response::make("Unfortunately, access to this document is forbidden for you.", 403);
 
     }
-
-    Log::info(222);
 
     //------------------------//
     // Обработать POST-запрос //
